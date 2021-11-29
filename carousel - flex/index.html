@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carousel Example</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <br><br>
+    
+    <br><br>
+
+    <div id="list">
+        <div class="item">
+            <figure>
+                <img src="https://picsum.photos/1280/720?random=1" />
+            </figure>
+            <h3>Slide 1</h3>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://picsum.photos/1280/720?random=2" />
+            </figure>
+            <h3>Slide 2</h3>
+            <p>second Slide</p>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://picsum.photos/1280/720?random=3" />
+            </figure>
+            <h3>Slide 3</h3>
+            <p>abcd Slide</p>
+            <p>abcd Slide</p>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://picsum.photos/1280/720?random=4" />
+            </figure>
+            <h3>Slide 4</h3>
+            <p>Third Slide</p>
+        </div>
+    </div>
+
+    <div style="text-align:center;">
+        <button type="button" onclick="slide1.previous()">Previous</button>
+        <button type="button" onclick="slide1.next()">Next</button>
+        <br>
+        <button type="button" onclick="showSlideNumber()">What is my slide number?</button>
+    </div>
+    
+
+    <br><br>
+
+    
+
+    
+    <script src="script.js"></script>
+    <script>
+        var slide1= new Carousel("#list");
+        
+        function showSlideNumber(){
+            alert(slide1.getSlideNumber());
+        }
+    </script>
+</body>
+</html>
